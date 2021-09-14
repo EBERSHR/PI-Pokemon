@@ -38,7 +38,7 @@ const { Pokemon, Tipo } = sequelize.models;
 Pokemon.belongsToMany(Tipo, { through: 'tabla_intermedia' });
 Tipo.belongsToMany(Pokemon, { through: 'tabla_intermedia' });
 
-module.exports = {
+module.exports = {     // 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
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
   conn: sequelize,     // para importart la conexión { conn } = require('./db.js');
   Pokemon,
