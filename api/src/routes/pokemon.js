@@ -1,17 +1,11 @@
 const { Router } = require('express');
-const axios = require('axios');
-const { Pokemon } = require('../db');
-
+// const { router } = require('../app');
+const {  getPokemons, getOnePokemon, addPokemon, searchPokemon } = require('../controllers/pokemonController');
 const router = Router();
 
-router.get('/', (req, res) => {
-    res.send('Hola Home!!!');
-});
+router.get("/", getPokemons)
+router.get("/one/:id", getOnePokemon)
+router.post("/add", addPokemon)
+router.get("/searchName", searchPokemon)
 
-router.get('/:id', (req, res) => {
-    res.send('Hola Id::::');
-});
-
-router.post('/', (req, res) => {
-    res.send('Hola Post.');
-});
+module.exports = router;
