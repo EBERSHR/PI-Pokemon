@@ -1,7 +1,4 @@
 import './App.css';
-import React, { useEffect } from 'react';
-import { getPokemones } from '../src/actions';
-import { useDispatch } from 'react-redux';
 import Landing from './components/Landing';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -11,13 +8,6 @@ import Crear from './components/Crear';
 
 
 function App() {
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-      dispatch(getPokemones())
-  }, [dispatch])
-
   return (
     <div className="App">
       <Router>

@@ -1,9 +1,9 @@
 .main-landing{
-    width: 100%;
-    height: 100%;
-	background-image: url('../images/poketfondo.jpg');  
-    background-repeat:no-repeat;
-    background-size: cover;
+	background-image: url('../images/pokemon.jpeg');  
+	background-size: cover;
+	background-position: center;
+    background-color: black;
+	padding: 15em;
 
 }
 
