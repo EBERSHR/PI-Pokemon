@@ -4,6 +4,7 @@ export const GET_POKEMONES = 'GET_POKEMONES';
 export const GET_POKEMONES_BY_ID = 'GET_POKEMONES_BY_ID';
 export const QUIT_POKEMONES_BY_ID = 'QUIT_POKEMONES_BY_ID';
 export const CREATE_POKEMON = 'CREATE_POKEMON';
+export const A = 'A';
 
 
 export const getPokemones = (payload) => {
