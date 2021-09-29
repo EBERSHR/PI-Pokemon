@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {useDispatch, useSelector, } from'react-redux'
+import { useDispatch, useSelector, } from 'react-redux'
 // import {useHistory } from 'react-router-dom'
 import { useEffect } from 'react';
 import { createPokemon } from '../actions';
@@ -29,7 +29,7 @@ function Crear() {
         image: "",
         types: []
     })
-    const tipos = useSelector(state=> state.types);
+    const tipos = useSelector(state => state.types);
 
     const handleOnChange = (e) => {
         setCrear({
@@ -38,11 +38,11 @@ function Crear() {
         })
     }
 
-    const handleOnChangeSelect = (e)=>{
-        if(crear.types.includes(e.target.value)){
+    const handleOnChangeSelect = (e) => {
+        if (crear.types.includes(e.target.value)) {
             setCrear({
                 ...crear,
-                types: crear.types.filter(tp=> tp !== e.target.value)
+                types: crear.types.filter(tp => tp !== e.target.value)
             })
         } else {
             setCrear({
@@ -52,9 +52,8 @@ function Crear() {
         }
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(crear)
         dispatch(joinPokemon(crear));
         dispatch(createPokemon(crear))
         // setCrear({
@@ -69,7 +68,7 @@ function Crear() {
         //     types:[]
         // })
     }
-    
+
     const allTypes = () => {
         // tipos.map(element => {
         //     if (tt.indexOf(element[0].name) === -1) {
@@ -77,85 +76,124 @@ function Crear() {
         //     }
         // });
 
-       if (tipos.length > 0) {
-        tipos.map(element => {
-            if (tt.indexOf(element.name) === -1) {
-                tt.push({
-                    name: element.name,
-                    id: element.id
-                })
-            }
-            // console.log('TT::::', tt)
-        });
-       }
-        
+        if (tipos.length > 0) {
+            tipos.map(element => {
+                if (tt.indexOf(element.name) === -1) {
+                    tt.push({
+                        name: element.name,
+                        id: element.id
+                    })
+                }
+                return "";
+            });
+        }
+
     }
     allTypes();
 
     return (
-        <div>
-            <br />
-            <h1 className="logo">Crea tu propio <span>Pokemon</span> </h1>
+        <div className="formComponent">
+            <div>
+                <br />
+                <h1 className="logo">Crea tu propio <span>Pokemon</span> </h1>
+                <div className="crear-wraper">
+                    <div className="crear-form">
+                        <form onSubmit={(e) => { handleSubmit(e) }}>
 
-            <div className="crear-wraper">
-                <div className="crear-form">
 
-                <form onSubmit={(e)=> {handleSubmit(e)}}>
-                <label htmlFor="">Nombre: </label>
-                <input name="name" value={crear.name} onChange={e => handleOnChange(e)}
-                placeholder="Escribe el nombre de tu pokemon" />
-                <label htmlFor="">Vida: </label>
-                <input name="hp" value={crear.hp} onChange={e => handleOnChange(e)} />
-                <label htmlFor="">Fuerza: </label>
-                <input name="strenght" value={crear.strenght} onChange={e => handleOnChange(e)} />
-                <label htmlFor="">Defensa: </label>
-                <input name="defense" value={crear.defense} onChange={e => handleOnChange(e)} />
-                <label htmlFor="">Velocidad: </label>
-                <input name="speed" value={crear.speed} onChange={e => handleOnChange(e)} />
-                <label htmlFor="">Altura: </label>
-                <input name="height" value={crear.height} onChange={e => handleOnChange(e)} />
-                <label htmlFor="">Peso: </label>
-                <input name="weight" value={crear.weight} onChange={e => handleOnChange(e)} />
-                <label htmlFor="">Imagen: </label>
-                <input name="image" value={crear.image} onChange={e => handleOnChange(e)} />
-                {/* <label htmlFor="">Crear tipo nuevo: </label>
+                            <div className="comboImput">
+                                <div className="divEtiqueta">
+                                    <label className="etiqueta" htmlFor="">Nombre: </label>
+                                </div>
+                                <div className="inputComponent">
+                                    <input className="inputData" name="name" value={crear.name} onChange={e => handleOnChange(e)} placeholder="Escribe el nombre de tu pokemon" />
+                                </div>
+                            </div>
+
+
+                            <div className="comboImput">
+                                <div className="divEtiqueta">
+                                <label className="etiqueta" htmlFor="">Vida: </label>
+                                </div>
+                                <div className="inputComponent">
+                                <input className="inputData"  name="hp" value={crear.hp} onChange={e => handleOnChange(e)} />
+                                </div>
+                            </div>
+
+                            <div className="comboImput">
+                                <div className="divEtiqueta">
+                                <label className="etiqueta" htmlFor="">Fuerza: </label>
+                                </div>
+                                <div className="inputComponent">
+                                <input  className="inputData"  name="strenght" value={crear.strenght} onChange={e => handleOnChange(e)} />
+                                </div>
+                            </div>
+
+                            <div className="comboImput">
+                                <div className="divEtiqueta">
+                                <label className="etiqueta" htmlFor="">Defensa: </label>
+                                </div>
+                                <div className="inputComponent">
+                                <input className="inputData"  name="defense" value={crear.defense} onChange={e => handleOnChange(e)} />
+                                </div>
+                            </div>
+
+                            <div className="comboImput">
+                                <div className="divEtiqueta">
+                                <label className="etiqueta" htmlFor="">Velocidad: </label>
+                                </div>
+                                <div className="inputComponent">
+                                <input className="inputData"  name="speed" value={crear.speed} onChange={e => handleOnChange(e)} />
+                                </div>
+                            </div>
+
+                            <div className="comboImput">
+                                <div className="divEtiqueta">
+                                <label className="etiqueta" htmlFor="">Altura: </label>
+                                </div>
+                                <div className="inputComponent">
+                                <input className="inputData"  name="height" value={crear.height} onChange={e => handleOnChange(e)} />
+                                </div>
+                            </div>
+
+                            <div className="comboImput">
+                                <div className="divEtiqueta">
+                                <label className="etiqueta" htmlFor="">Peso: </label>
+                                </div>
+                                <div className="inputComponent">
+                                <input className="inputData"  name="weight" value={crear.weight} onChange={e => handleOnChange(e)} />
+                                </div>
+                            </div>
+
+                            <div className="comboImput">
+                                <div className="divEtiqueta">
+                                <label className="etiqueta" htmlFor="">Imagen: </label>
+                                </div>
+                                <div className="inputComponent">
+                                <input className="inputData"  name="image" value={crear.image} onChange={e => handleOnChange(e)} />
+                                </div>
+                            </div>
+
+                            {/* <label htmlFor="">Crear tipo nuevo: </label>
                 <input name="newType"  onChange={e => handleOnChange(e)}/> */}
-                <h2>Seleccionar tipo</h2>
-
-
-
-
-
-
-
-                <select name="type" onChange={handleOnChangeSelect} multiple>
-                {
-                        tt.map((e, i) => {
-                            // console.log("tipos", e);
-                            return <option key={"tipos" + i} value={e.id} >{e.name}</option>
-                        })
-                    }
-                </select>
-
-
-
-
-
-
-
-
-                <button className="myButton-crear" type="submit" >Crear</button>
-
-            </form>
-
+                            <h2>Seleccionar tipo</h2>
+                            <select name="type" onChange={handleOnChangeSelect} multiple>
+                                {
+                                    tt.map((e, i) => {
+                                        return <option key={"tipos" + i} value={e.id} >{e.name}</option>
+                                    })
+                                }
+                            </select>
+                            <button className="myButton-crear" type="submit" >Crear</button>
+                        </form>
+                    </div>
                 </div>
-
+                <NuevoTipo />
             </div>
-            <NuevoTipo />
         </div>
-       
 
-    )   
+
+    )
 }
 
 export default Crear

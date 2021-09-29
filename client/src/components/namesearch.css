@@ -1,0 +1,22 @@
+.main-busquedaNombre {
+width: 400px;
+height: 35px;
+}
+
+.search-input {
+    display: flex;
+    flex-direction: row;
+    height: 28px;
+    width: 100px;
+}
+
+input {
+    width: 100px;
+}
+
+.nameSearch {
+    width: 600px;
+    font-size: 20px;
+    height: 22px;
+    margin-left: 45px;
+}

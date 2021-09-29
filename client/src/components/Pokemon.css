@@ -16,22 +16,12 @@
 
   }
 
-  .back{
-    background-color: yellow;
-    margin-bottom: 15px;
-  }
-
-    .forward{
-    background-color: blue;
-    margin-bottom: 15px;
-
-  }
-
   .imagenes-card {
     border: 2px solid #e7e7e7;
-    border-radius: 4px;
+    border-radius: 38px;
     padding: .5rem;
     box-shadow: 0px 1px 5px 0px;
+    width: 50%;
   }
 
   .container-pokemones{
@@ -42,4 +32,25 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background-color: white;
     color: black;
+    margin-top: 50px;
+    margin-left: 150px;
+  }
+
+  .navButton {
+    height: 30px;
+    width: 100px;
+
+  }
+
+  .button-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(247, 242, 242);
+    height: 30px;
+  }
+
+  .selector {
+    font-size: 20px;
+    height: 30px;
   }

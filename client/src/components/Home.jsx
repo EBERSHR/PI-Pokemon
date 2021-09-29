@@ -9,11 +9,9 @@ function Home() {
             <br />
             <h1>POKEMÓN</h1>
                 <div className="main-home">
-
                     {/* <div className="area-busqueda">
                         <Search />    
                     </div> */}
-
                     <div className="area-pokemon">
                         <Pokemon />
                     </div>

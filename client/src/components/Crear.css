@@ -8,46 +8,18 @@
     color: #B70E21;
 }
 
-.crear-form form {
+/* .crear-form form {
     display: grid;
     grid-template-columns: 25% 25%;
     grid-gap: 5px;
-	/* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAFElEQVQImWNggIKysjIpHAwGBgYAWJsEdbVd/aEAAAAASUVORK5CYII=);
-	background-repeat: repeat;
-	background-color: white;
-	color: #000;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #AAA;
-	border-radius: 4px;
-	box-shadow: 0 0 8px -3px #888; */
-}
-.crear-form label {
-    display: block;
-}
-/* .crear-form form :hover {
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAFElEQVQImWNggIKysjIpHAwGBgYAWJsEdbVd/aEAAAAASUVORK5CYII=);
-	background-repeat: repeat;
-	background-color: #FFF;
-	color: #222;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #AAA;
-	border-radius: 4px;
-	box-shadow: 0 0 8px -3px #888;
+} */
+
+
+.formComponent {
+	margin-top: 30px;
 }
 
-.crear-form :focus {
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAFElEQVQImWNggIKysjIpHAwGBgYAWJsEdbVd/aEAAAAASUVORK5CYII=);
-	background-repeat: repeat;
-	background-color: #FFF;
-	color: #222;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #AAA;
-	border-radius: 4px;
-	box-shadow: 0 0 8px -3px #888;
-} */
+
 
 .myButton-crear {
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -75,4 +47,52 @@
 .myButton-crear:active {
 	position:relative;
 	top:1px;
+}
+
+.formComponent {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	/* background-color: blue; */
+}
+
+.crear-form {
+	border: solid;
+	border-color: black;
+	border-radius: 18px;
+	border-width: 1px;
+}
+
+
+
+.inputData {
+	width: 90%;
+	margin-top: 3px;
+	margin-bottom: 10px;
+	height: 25px;
+	font-size: 20px;
+	border-radius: 8px;
+}
+
+
+.comboImput {
+	display: flex;
+	flex-direction: row;
+}
+
+.divEtiqueta {
+	/* background-color: red; */
+	text-align: left;
+	padding-left: 35px;
+	width: 20%;
+}
+
+.inputComponent {
+	width: 70%;
+}
+
+.etiqueta {
+	font-size: 20px;
+	/* background-color: yellow; */
+	/* width: 100px; */
 }
